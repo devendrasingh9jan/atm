@@ -40,12 +40,12 @@
 	}
 </style>
 
-	<title>OBS</title>
+	<title>ATM</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
 	<div class="container-fluid">
-		<a class="navbar-brand text-light" href="/login">OBS</a>
+		<a class="navbar-brand text-light" href="/login">ATM</a>
 	</div>
 </nav>
 <div align="center" class="container">

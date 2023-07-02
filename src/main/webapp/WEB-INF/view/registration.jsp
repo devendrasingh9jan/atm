@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="/css1/bootstrap.min.css" />
 <script type="text/javascript" src="/js1/jquery.min.js"></script>
 <script type="text/javascript" src="/js1/bootstrap.min.js"></script>
-<title>OBS</title>
+<title>ATM</title>
 <style>
 
 form {
@@ -132,7 +132,7 @@ label {
 </head>
 <body onload="document.form.username.focus()">
 	<nav class="navbar">
-    <a class="navbar-brand" href="/login">OBS</a>
+    <a class="navbar-brand" href="/login">ATM</a>
 </nav>
 	
 	<div class="container">

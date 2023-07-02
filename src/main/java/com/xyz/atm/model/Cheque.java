@@ -21,7 +21,8 @@ public class Cheque {
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
+    private Long accountId;
     private Double checkAmount;
     private Date checkDate;
-    private String checkStatus;
+    private Long depositedById;
 }

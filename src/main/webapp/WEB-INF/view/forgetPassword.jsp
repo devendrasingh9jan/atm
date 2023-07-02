@@ -74,7 +74,7 @@
 <body>
 
 <nav class="navbar">
-    <a class="navbar-brand" href="/login">OBS</a>
+    <a class="navbar-brand" href="/login">ATM</a>
 </nav>
 
 <div class="container">

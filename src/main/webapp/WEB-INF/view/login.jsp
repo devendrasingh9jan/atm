@@ -7,7 +7,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>OBS</title>
+<title>ATM</title>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <style>
@@ -22,7 +22,7 @@
         background-size: cover;
         background-color: #f8f8f8; /* Changed background color */
         font-family: Arial, sans-serif; /* Added font-family */
-        background-image: url("https://www.universityliving.com/blog/wp-content/uploads/2019/10/UK-Bank.png");
+        background-image: url("https://content.pymnts.com/wp-content/uploads/2016/10/global-atm-market-to-surge-.jpg");
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -164,7 +164,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-key"></i></span>
                             </div>
-                            <input type="password" name='password'class="form-control" placeholder="Password">
+                            <input type="password" name='password'class="form-control" placeholder="Password" minlength="4" maxlength="4">
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Log In" name="submit" class="btn float-right login_btn" />

@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
 
 
-        <a href="" class="navbar-brand text-light" >OBS</a>
+        <a href="" class="navbar-brand text-light" >ATM</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
 
@@ -28,13 +28,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="/payee/"
-                       class="nav-link text-light">Payee</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="/deposit/"
-                       class="nav-link text-light">Deposit</a>
+                    <a href="/atm/"
+                       class="nav-link text-light">Withdraw</a>
                 </li>
 
                 <li class="nav-item">

@@ -18,7 +18,7 @@
             margin-top: 50px;
         }
       	body{
-      		background-image: url("https://www.revenued.com/wp-content/uploads/2021/05/ACCOUNT-MAIN-01-1024x512.jpg");
+      		background-image: url("https://media.istockphoto.com/id/1165467954/photo/unrecognizable-african-man-using-touch-screen-on-atm-outdoor.jpg?s=612x612&w=0&k=20&c=TfYRnpobNfoGUtMgwE-WyWjcCPrSW8KbZgCGjtSmNdQ=");
         	background-size: cover;
         	background-repeat: no-repeat;
       	}
@@ -38,7 +38,7 @@
            		}
            		%>
 <div class="container text-white">
-    <jsp:include page="headerUser.jsp"></jsp:include>
+    <jsp:include page="header.jsp"></jsp:include>
     <br>
     <form>
       <div class="form-row">
@@ -51,7 +51,7 @@
       <div class="form-row">
         <div class="col-md-2 mb-3">
           <label>&nbsp;</label>
-          <button class="form-control btn btn-primary btn-block" type="button" onclick="getAccountStatement()">Statement</button>
+          <button class="form-control btn btn-primary btn-block" type="button" onclick="getAccountStatement()">Mini Statement</button>
         </div>
         <div id="accountStatement"></div>
       </div>
@@ -59,21 +59,21 @@
       <div class="form-row">
               <div class="col-md-2 mb-3">
                 <label>&nbsp;</label>
-                <button class="form-control btn btn-primary btn-block" type="button" onclick="showTransferForm()">Fund Transfer</button>
+                <button class="form-control btn btn-primary btn-block" type="button" onclick="showTransferForm()">Deposit By Cheque</button>
               </div>
             </div>
     </form>
 
-    <form id="transferForm" style="display: none;">
+    <form id="chequeForm" style="display: none;">
       <div class="form-group">
-        <label for="payeeId">Payee ID:</label>
-        <input type="text" class="form-control" id="payeeId" name="payeeId" placeholder="Enter Payee ID" required>
+        <label for="accountId">Payee ID:</label>
+        <input type="text" class="form-control" id="accountId" name="accountId" placeholder="Account Number/ID" required>
       </div>
       <div class="form-group">
         <label for="amount">Amount:</label>
         <input type="text" class="form-control" id="amount" name="amount" placeholder="Enter Amount" required>
       </div>
-      <button type="submit" class="btn btn-primary">Transfer</button>
+      <button type="submit" class="btn btn-primary">Deposit</button>
     </form>
 
 
@@ -90,7 +90,7 @@
         dataType: "text",
         success: function(response) {
           console.log("Account Summary:", response);
-          $("#accountSummary").text("Account Summary: " + response); // Set the value in the element
+          $("#accountSummary").text("Balance Summary: " + response); // Set the value in the element
         },
         error: function(error) {
           console.error("Error:", error);
@@ -133,32 +133,32 @@
       }
 
     function showTransferForm() {
-        $("#transferForm").show();
+        $("#chequeForm").show();
       }
 
       $(document).ready(function() {
-        $("#transferForm").submit(function(event) {
+        $("#chequeForm").submit(function(event) {
           event.preventDefault();
 
-          var transferData = {
-            payeeId: $("#payeeId").val(),
-            amount: $("#amount").val()
+          var chequeData = {
+            accountId: $("#accountId").val(),
+            checkAmount: $("#amount").val()
           };
 
           $.ajax({
-            url: "/account/transfer",
+            url: "/cheque/deposit",
             type: "POST",
             contentType: "application/json",
             dataType: "text",
-            data: JSON.stringify(transferData),
+            data: JSON.stringify(chequeData),
             success: function(response) {
-              console.log("Transfer successful");
-              alert("Transfer successful");
+              console.log("Cheque deposited successfully");
+              alert("Cheque deposited successfully");
               // Handle success response
             },
             error: function(error) {
-                alert("Transfer failed");
-              console.error("Transfer failed:", error);
+                alert("Cheque Rejected");
+              console.error("Cheque Rejected:", error);
               // Handle error response
             }
           });

@@ -32,7 +32,7 @@
 </head>
 <body onload="document.form.username.focus()">
     <nav class="navbar">
-        <a class="navbar-brand" href="/logout">OBS</a>
+        <a class="navbar-brand" href="/logout">ATM</a>
     </nav>
     <div class="container">
         <div class="row">
@@ -49,7 +49,7 @@
                     <div class="error-actions">
                         <a href="/account" class="btn btn-primary btn-success">
                             <span class="fa fa-road bg-dark" aria-hidden="true"></span>
-                            Return to View Vehicles
+                            Return to Account
                         </a>
                     </div>
                 </div>

@@ -28,8 +28,8 @@ public class UserService {
         }
         Branch branch = new Branch();
         branch.setBankName("XYZ");
-        branch.setBranchName("123 Main St");
-        branch.setAddress("123 Main St Agra");
+        branch.setBranchName("Madhunagar");
+        branch.setAddress("Madhunagar Agra");
         customer.setBranch(branch);
         customerRepository.save(customer);
         Account account = new Account();
