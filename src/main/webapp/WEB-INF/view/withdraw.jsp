@@ -95,7 +95,9 @@
           	}
 
         </style>
+
     <div class="container">
+    <jsp:include page="header.jsp"></jsp:include>
             <div class="row">
                 <div class="col-md-6">
                     <h1>Withdraw Cash</h1>
